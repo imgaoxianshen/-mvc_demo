@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>用户数据</title>
+        <style type="text/css">
+        #table{
+            width:600px;
+            margin:0 auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+
+        }
+        #table td{
+           padding:10px;
+           border:1px solid #333;
+        }
+        </style>
+    </head>
+    <body>
+       <h1 align="center">用户列表</h1> 
+       <form action="" method="post"> 
+           <table id="table">
+               <tr>
+                   <td>用户名</td>   
+                   <td>序号</td>
+                   <td>性别</td>
+               </tr>
+               <?php foreach($list as $v):?>
+               <tr>
+                    <td><?php echo $v['username']?></td>   
+                    <td><?php echo $v['id']?></td>
+                    <td><?php echo empty($v['sex'])?'男':'女';?></td>
+                </tr>
+               <?php endforeach;?>
+           </table>
+       </form>
+
+    </body>
+</html>   
